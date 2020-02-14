@@ -1,0 +1,29 @@
+
+<html>
+  <link rel="stylesheet" type="text/css" href="simple_tpm.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/navify_favicon.ico">
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = google.visualization.arrayToDataTable([["Team","Scope","Done","Scope Rate","Done Rate"],
+["Total",432,365,27.66153846153846,17.046153846153878],
+["Tweag",78,45,23.13846153846154,5.507692307692312],
+["HW",9,8,4.799853828545665e-15,-1.0605424573110919e-15],
+["SW",200,186,1.3846153846154283,6.276923076922974],
+["FlightTest",1,1,-1.3256780716388649e-16,-1.3256780716388649e-16]]);
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+        table.draw(data, {showRowNumber: false, width: '420px', height: '200px'});
+      }
+    </script>
+  </head>
+  <body>
+    <p>Statistics</p>
+    <div id="table_div"></div>
+    <p></p>
+  </body>
+</html>
+
